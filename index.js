@@ -6,7 +6,11 @@ function takeANumber(katzDeliLine, name) {
 }
 
 function nowServing(deliLine) {
-  var customer = deliLine[0];
-  deliLine.shift();
-  return customer;
+  var customer;
+  if (deliLine.length >0 ) {
+    customer = deliLine[0]
+    deliLine.shift();
+  } else {
+    return 'There is nobody waiting to be served!';
+  }
 }
